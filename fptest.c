@@ -122,7 +122,6 @@ int main(int argc, char *argv)
 {
     int i;
 
-    printf("Hello world\n");
     printf("sizeof(int): %d\n", sizeof(int));
     
     for (i=0; i < xy_MAX; i++)
@@ -131,6 +130,7 @@ int main(int argc, char *argv)
         py[i] = 2*i;
     }
 
+#if 0
     {
         stats_clear(&g_stats);
         clock_t t1 = clock();
@@ -140,7 +140,9 @@ int main(int argc, char *argv)
         double duration_s = (double)duration_ticks / CLOCKS_PER_SEC;
         printf("g_stats: %d %f %d %f %f %f %f %f %f %f\n", duration_ticks, duration_s, g_stats.n, g_stats.sum_x, g_stats.sum_x2, g_stats.sum_y, g_stats.sum_y2, g_stats.sum_s2, g_stats.sum_s2x, g_stats.sum_s2y);
     }
-    
+#endif
+
+#if 0
     {
         stats_t s1;
         stats_clear(&s1);
@@ -151,7 +153,9 @@ int main(int argc, char *argv)
         double duration_s = (double)duration_ticks / CLOCKS_PER_SEC;
         printf("process2: %d %f %d %f %f %f %f %f %f %f\n", duration_ticks, duration_s, s1.n, s1.sum_x, s1.sum_x2, s1.sum_y, s1.sum_y2, s1.sum_s2, s1.sum_s2x, s1.sum_s2y);
     }
-    
+#endif
+
+#if 0    
     {
         stats_t s1;
         stats_clear(&s1);
@@ -162,8 +166,8 @@ int main(int argc, char *argv)
         double duration_s = (double)duration_ticks / CLOCKS_PER_SEC;
         printf("process3: %d %f %d %f %f %f %f %f %f %f\n", duration_ticks, duration_s, s1.n, s1.sum_x, s1.sum_x2, s1.sum_y, s1.sum_y2, s1.sum_s2, s1.sum_s2x, s1.sum_s2y);
     }
+#endif
 
-    while(1)
     {
         int i;
         int n = 0;
@@ -181,6 +185,7 @@ int main(int argc, char *argv)
         printf("threshold: %d %f %d\n", duration_ticks, duration_s, n);
     }
 
+    printf("\n");
     return 0;
 }
 
