@@ -1,0 +1,16 @@
+[X] Measure the time to threshold 10K, 100K, 1M, 10M points
+
+[X] Measure the time to process 1K, 10K, 100K, 1M points
+
+[X] Repeat these measurements for various optimisation levels
+
+[ ] Measure the time to read an image from a file
+
+[ ] Measure the time to read an image from a webcam
+
+[ ] Measure the time to convert a JPEG image to some internal format
+
+[ ] Measure the time to send 10, 100, 1000, 10000 bytes of data over Wi-Fi
+    with the processor running almost 100%
+
+
